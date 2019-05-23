@@ -60,6 +60,52 @@ export function httpGet({
   })
 }
 
+
+//delete请求
+export function httpDelete({
+  url,
+  params = {}
+}){
+  return new Promise((resolve, reject) => {
+    axios.delete(url, {
+      params
+    }).then((res) => {
+      resolve(res.data)
+    }).catch(err => {
+      reject(err)
+    })
+  })
+}
+
+//put请求
+export function httpPut({
+  url,
+  data = {},
+  params = {}
+}) {
+  return new Promise((resolve) => {
+    axios({
+      url,
+      method: 'put',
+      transformRequest: [function (data) {
+        let ret = ''
+        for (let it in data) {
+          ret += encodeURIComponent(it) + '=' + encodeURIComponent(data[it]) + '&'
+        }
+        return ret
+      }],
+      // 发送的数据
+      data,
+      // url参数
+      params
+
+    }).then(res => {
+      resolve(res.data)
+    })
+  })
+}
+
+
 // post请求
 export function httpPost({
   url,

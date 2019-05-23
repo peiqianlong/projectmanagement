@@ -1,10 +1,10 @@
 // api.js
-import { httpGet, httpPost } from '../units/http'
+import { httpGet, httpPost ,httpDelete , httpPut} from '../units/http'
 export const getorglist = (params = {}) => httpGet({ url: '/admin', params })
 
 export const save = (data) => {
-  return httpPost({
-    url: 'admin',
+  return httpPut({
+    url: 'save',
     data
   })
 }
