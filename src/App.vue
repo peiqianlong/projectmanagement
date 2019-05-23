@@ -16,9 +16,6 @@
                   <el-breadcrumb-item :to="{ path: '/' }">首页</el-breadcrumb-item>
                   <el-breadcrumb-item v-if="$route.name == '首页' ? false : true ">{{$route.name == "首页" ? "" : $route.name}}</el-breadcrumb-item>
                 </el-breadcrumb>
-                <!-- <span @click="goindex">首页</span>
-                <span>{{$route.name == "首页" ? "" :"/"}}</span>
-                <span>{{$route.name == "首页" ? "" :$route.name}}</span> -->
               </div>
             </el-col>
           </el-row>
