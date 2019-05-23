@@ -8,13 +8,11 @@ Vue.use(Router)
   routes: [
     {
       path: '/home',
-      name: 'home',
+      name: '首页',
       component: Home
     },
     {
-      path: '/',
-      name: 'home',
-      component: Home
+      path: '/', redirect: { name: '首页' }
     },
     // {
     //   path: '/about',

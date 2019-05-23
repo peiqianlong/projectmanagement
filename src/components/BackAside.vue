@@ -143,5 +143,6 @@ export default {
   height: 60px;
   color: white;
   line-height: 60px;
+  cursor: pointer;
 }
 </style>

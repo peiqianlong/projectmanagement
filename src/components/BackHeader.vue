@@ -75,6 +75,7 @@ export default {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  cursor: pointer;
 }
 i {
   font-size: 28px;
@@ -112,6 +113,7 @@ span {
   background: #ccc;
   right: 0;
   top: 60px;
+  z-index: 10;
 }
 
 .fade-enter-active,
